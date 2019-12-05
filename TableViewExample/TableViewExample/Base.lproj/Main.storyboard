@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sld-d3-GsW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="joH-Pj-dNt">
+            <objects>
+                <tableViewController id="chE-L3-Num" customClass="TableViewController" customModule="TableViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="204" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sHt-uB-1J2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExerciseCell" id="KNy-ti-Q5k" customClass="ExerciseTableViewCell" customModule="TableViewExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="204"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KNy-ti-Q5k" id="45L-UO-Sfs">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="204"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PUSHUPS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sh9-Jr-6ta">
+                                            <rect key="frame" x="8" y="91.5" width="359" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Lsu-QE-ERW"/>
+                                                <constraint firstAttribute="width" constant="359" id="bao-vb-qRw"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PUSHUPS" translatesAutoresizingMaskIntoConstraints="NO" id="XLN-FZ-h6q">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="208.5"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Sh9-Jr-6ta" firstAttribute="centerX" secondItem="45L-UO-Sfs" secondAttribute="centerX" id="60E-dt-kH7"/>
+                                        <constraint firstItem="XLN-FZ-h6q" firstAttribute="top" secondItem="45L-UO-Sfs" secondAttribute="top" id="Ddj-LK-6Wk"/>
+                                        <constraint firstItem="XLN-FZ-h6q" firstAttribute="leading" secondItem="45L-UO-Sfs" secondAttribute="leading" id="IKH-iR-gTN"/>
+                                        <constraint firstItem="Sh9-Jr-6ta" firstAttribute="centerY" secondItem="45L-UO-Sfs" secondAttribute="centerY" id="c6A-Gu-Mtr"/>
+                                        <constraint firstAttribute="bottom" secondItem="XLN-FZ-h6q" secondAttribute="bottom" constant="-5" id="isH-hq-1uC"/>
+                                        <constraint firstAttribute="trailing" secondItem="XLN-FZ-h6q" secondAttribute="trailing" id="yhw-mR-tR7"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageCell" destination="XLN-FZ-h6q" id="DjG-rF-lIr"/>
+                                    <outlet property="labelCell" destination="Sh9-Jr-6ta" id="n8E-VU-KTw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="chE-L3-Num" id="mMh-wb-n4t"/>
+                            <outlet property="delegate" destination="chE-L3-Num" id="Puf-p4-Acd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Table View Controller" id="Gs4-Y9-ZQ4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QoN-Lp-hnS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="682" y="-124"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YtB-fx-rgV">
+            <objects>
+                <navigationController id="Sld-d3-GsW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g6v-2y-Vb3">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="chE-L3-Num" kind="relationship" relationship="rootViewController" id="ms7-JS-IF1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b7w-Ud-lcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63" y="-124"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PUSHUPS" width="960" height="522"/>
+    </resources>
+</document>
